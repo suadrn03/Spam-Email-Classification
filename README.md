@@ -79,6 +79,6 @@ The models are implemented using NumPy and SciPy sparse matrices. Training and v
 
 This project uses the [Spam Mails Dataset](https://www.kaggle.com/datasets/venky73/spam-mails-dataset/data), based on the Enron1 email collection.
 
-The dataset is listed under the **CC0: Public Domain** license on Kaggle and is used here for educational and machine learning purposes. [Kaggle page](https://www.kaggle.com/datasets/venky73/spam-mails-dataset/data).
+The dataset is listed under the **CC0: Public Domain** license on Kaggle and is used here for educational and machine learning purposes. 
 
 The dataset is not redistributed in this repository. It can be downloaded directly from the original Kaggle page.
