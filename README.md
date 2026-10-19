@@ -14,16 +14,18 @@ A notebook-based machine-learning project exploring how to classify email messag
 
 ## Notebook
 
-Open [`spam_classifier_fixed.ipynb`](spam_classifier_fixed.ipynb) in Jupyter Notebook, JupyterLab, or GitHub's notebook viewer. The notebook includes section headings, explanations of each task, and comments to make the workflow easier to follow.
+Open [`spam_classifier.ipynb`](spam_classifier.ipynb) in Jupyter Notebook, JupyterLab, or GitHub's notebook viewer. The notebook includes section headings, explanations of each task, and comments to make the workflow easier to follow.
 
 ## Dataset
 
-The notebook expects a CSV file named `spam_ham_dataset.csv` in the working directory. Based on the code, the file must contain:
+This project uses the [Spam Mails Dataset](https://www.kaggle.com/datasets/venkateshgarnepudi/spam-mails-dataset), published on Kaggle by Venkatesh Garnepudi. The uploader describes it as a CSV prepared from the **Enron1** spam/ham email collection. The Kaggle dataset listing specifies **CC0: Public Domain**; this is the uploader's stated license, and the original source's terms should also be considered if redistributing the emails.
 
-- `text`: the email message text.
-- `label_num`: the numeric class label (the code assumes `1` means spam and `0` means ham).
+Download `spam_ham_dataset.csv` from the linked dataset page and place it in the same folder as the notebook. The notebook uses:
 
-The dataset is intended for public use. No separate license file is included for the dataset in this repository. Public availability alone does not establish redistribution rights, so users should check the original dataset source and any applicable terms before reusing or redistributing it.
+- `text`: email message text.
+- `label_num`: numeric class label (`1` for spam, `0` for ham).
+
+The CSV is not required to be committed to this repository; downloading it separately keeps the repository lightweight.
 
 ## Requirements
 
@@ -48,7 +50,7 @@ pip install pandas numpy matplotlib scikit-learn scipy jupyter
 1. Clone or download this repository.
 2. Place `spam_ham_dataset.csv` in the project directory.
 3. Install the dependencies listed above.
-4. Open `spam_classifier_fixed.ipynb`.
+4. Open `spam_classifier.ipynb`.
 5. Run the cells from top to bottom.
 
 ## Workflow overview
@@ -63,7 +65,7 @@ pip install pandas numpy matplotlib scikit-learn scipy jupyter
 
 ## Implementation notes
 
-The corrected notebook fixes the original confusion-matrix helper, calculates logistic-regression validation loss on the validation split, restores the best weights after early stopping, and adds numerical safeguards. Model selection uses validation data, with the test set reserved for final evaluation. Run the notebook with the actual dataset to generate and verify your own results.
+The models are implemented using NumPy and SciPy sparse matrices. Training and validation losses and accuracies are tracked during fitting. Hyperparameters and classification thresholds are selected using validation data, with the test set reserved for final evaluation. Run the notebook from top to bottom to reproduce the results.
 
 ## Metrics
 
@@ -78,9 +80,8 @@ The corrected notebook fixes the original confusion-matrix helper, calculates lo
 - Add a reproducible environment file such as `requirements.txt`.
 - Compare against a scikit-learn baseline such as `LogisticRegression` or `MultinomialNB`.
 - Report per-class metrics and compare models using precision, recall, and F1 rather than accuracy alone.
-- Document the original dataset source and any usage terms.
 - Save evaluation plots and include a small results table after running the notebook on the actual dataset.
 
-## License and dataset use
+## License
 
-No separate license has been added to this repository. The dataset is described as intended for public use, but this statement is not a substitute for permission or terms from its original publisher. Check the dataset source before redistribution. The repository code also has no explicit open-source license, so standard copyright rules apply unless one is added.
+The dataset is listed as **CC0: Public Domain** on its [Kaggle page](https://www.kaggle.com/datasets/venkateshgarnepudi/spam-mails-dataset). That listing does not automatically license the code in this repository. No separate license has been added for the project code; unless one is added, standard copyright rules apply.
