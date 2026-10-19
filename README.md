@@ -75,13 +75,10 @@ The models are implemented using NumPy and SciPy sparse matrices. Training and v
 - **F1 score:** harmonic mean of precision and recall.
 - **Confusion matrix:** counts correct and incorrect predictions by class.
 
-## Possible future improvements
+## Dataset and License
 
-- Add a reproducible environment file such as `requirements.txt`.
-- Compare against a scikit-learn baseline such as `LogisticRegression` or `MultinomialNB`.
-- Report per-class metrics and compare models using precision, recall, and F1 rather than accuracy alone.
-- Save evaluation plots and include a small results table after running the notebook on the actual dataset.
+This project uses the [Spam Mails Dataset](https://www.kaggle.com/datasets/venky73/spam-mails-dataset/data), based on the Enron1 email collection.
 
-## License
+The dataset is listed under the **CC0: Public Domain** license on Kaggle and is used here for educational and machine learning purposes. [Kaggle page](https://www.kaggle.com/datasets/venky73/spam-mails-dataset/data).
 
-The dataset is listed as **CC0: Public Domain** on its [Kaggle page](https://www.kaggle.com/datasets/venky73/spam-mails-dataset/data). That listing does not automatically license the code in this repository. No separate license has been added for the project code; unless one is added, standard copyright rules apply.
+The dataset is not redistributed in this repository. It can be downloaded directly from the original Kaggle page.
