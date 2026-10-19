@@ -84,4 +84,4 @@ The models are implemented using NumPy and SciPy sparse matrices. Training and v
 
 ## License
 
-The dataset is listed as **CC0: Public Domain** on its [Kaggle page](https://www.kaggle.com/datasets/venkateshgarnepudi/spam-mails-dataset). That listing does not automatically license the code in this repository. No separate license has been added for the project code; unless one is added, standard copyright rules apply.
+The dataset is listed as **CC0: Public Domain** on its [Kaggle page](https://www.kaggle.com/datasets/venky73/spam-mails-dataset/data). That listing does not automatically license the code in this repository. No separate license has been added for the project code; unless one is added, standard copyright rules apply.
